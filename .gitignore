@@ -1,0 +1,27 @@
+# Apply to every weekly project
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.idea/
+.vscode/
+*.tmp
+*.part
+
+# Keep directory placeholders; actual datasets remain local
+**/data/**
+!**/data/raw/
+!**/data/processed/
+!**/data/raw/.gitkeep
+!**/data/processed/.gitkeep

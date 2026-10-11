@@ -1,0 +1,71 @@
+{
+  "checked_at_utc": "2026-10-11T18:29:21.480800+00:00",
+  "python": "3.12.12",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "virtual_environment_active": true,
+  "mode": "cuda_required",
+  "imports": {
+    "pandas": {
+      "ok": true,
+      "version": "3.0.6"
+    },
+    "sentence_transformers": {
+      "ok": true,
+      "version": "6.1.0"
+    },
+    "chromadb": {
+      "ok": true,
+      "version": "1.5.9"
+    },
+    "spacy": {
+      "ok": true,
+      "version": "3.8.16"
+    },
+    "torch": {
+      "ok": true,
+      "version": "2.14.1"
+    },
+    "pyarrow": {
+      "ok": true,
+      "version": "26.0.0"
+    },
+    "datasets": {
+      "ok": true,
+      "version": "5.1.0"
+    },
+    "bs4": {
+      "ok": true,
+      "version": "4.15.0"
+    },
+    "langdetect": {
+      "ok": true,
+      "version": "1.0.9"
+    }
+  },
+  "smoke_tests": {
+    "pandas_dataframe": {
+      "ok": true
+    },
+    "sentence_transformers_api": {
+      "ok": true
+    },
+    "spacy_tokenization": {
+      "ok": true
+    },
+    "chromadb_add_query": {
+      "ok": true
+    },
+    "torch_cpu_operation": {
+      "ok": true
+    }
+  },
+  "cuda_available": false,
+  "cuda_verified": false,
+  "gpu_devices": [],
+  "torch_cuda_build": null,
+  "cuda_error": "CUDA unavailable. A supported NVIDIA GPU, compatible driver, and CUDA-enabled PyTorch are required. CPU mode does not satisfy the assignment GPU requirement.",
+  "imports_ok": true,
+  "smoke_tests_ok": true,
+  "assignment_gpu_requirement_met": false,
+  "passed": false
+}

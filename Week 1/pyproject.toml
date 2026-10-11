@@ -1,0 +1,35 @@
+[project]
+name = "week-1"
+version = "0.1.0"
+description = "Week 1: reproducible Wikipedia ingestion and text preprocessing"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "beautifulsoup4",
+    "chromadb",
+    "datasets",
+    "langdetect",
+    "pandas",
+    "pyarrow",
+    "requests",
+    "sentence-transformers",
+    "spacy",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.0",
+]

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "documents": 5936,
+  "minimum_documents": 5000,
+  "unique_ids": 5936,
+  "unique_text_hashes": 5936,
+  "min_chars": 108,
+  "max_chars": 122540,
+  "mean_chars": 12438.99,
+  "sha256": "0e3df971f70e56038dfd3d94c3a4e09c1691c6a0e9974f8820d830d29bce7766",
+  "errors": {},
+  "validated_at_utc": "2026-10-11T18:41:40.521917+00:00"
+}

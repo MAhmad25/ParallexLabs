@@ -1,0 +1,31 @@
+# Environments and secrets
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# All datasets and download caches stay local
+data/**
+!data/raw/
+!data/processed/
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+.cache/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Editors and temporary output
+.idea/
+.vscode/
+*.tmp
+*.part

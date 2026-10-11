@@ -1,0 +1,21 @@
+{
+  "created_at_utc": "2026-10-11T18:38:59.098691+00:00",
+  "input_file": "wikipedia_en.jsonl",
+  "output_file": "clean_corpus.jsonl",
+  "input_sha256": "f01822d117b9283fa6454499b2654ad98815ec729512d9e2c9cf64ebd1725a0b",
+  "output_sha256": "0e3df971f70e56038dfd3d94c3a4e09c1691c6a0e9974f8820d830d29bce7766",
+  "config": {
+    "target_language": "en",
+    "min_chars": 100,
+    "min_language_confidence": 0.9
+  },
+  "raw_documents": 6000,
+  "clean_documents": 5936,
+  "rejected_documents": 64,
+  "rejections_by_reason": {
+    "low_language_confidence": 41,
+    "too_short": 6,
+    "wrong_language": 17
+  },
+  "deduplication": "exact article ID and SHA-256 of normalized text"
+}

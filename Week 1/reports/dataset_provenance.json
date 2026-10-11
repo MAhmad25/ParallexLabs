@@ -1,0 +1,22 @@
+{
+  "downloaded_at_utc": "2026-10-11T18:34:40.469036+00:00",
+  "dataset": "wikimedia/wikipedia",
+  "configuration": "20231101.en",
+  "revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+  "split": "train",
+  "sampling": "first N articles in snapshot order; no shuffle",
+  "documents": 6000,
+  "unique_article_ids": 6000,
+  "raw_file": "wikipedia_en.jsonl",
+  "raw_bytes": 76048164,
+  "raw_sha256": "f01822d117b9283fa6454499b2654ad98815ec729512d9e2c9cf64ebd1725a0b",
+  "dataset_url": "https://huggingface.co/datasets/wikimedia/wikipedia",
+  "snapshot_url": "https://huggingface.co/datasets/wikimedia/wikipedia/tree/b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+  "source_type": "Wikipedia dump-derived, upstream-extracted article text",
+  "licenses_listed_by_dataset_card": [
+    "CC-BY-SA-3.0",
+    "GFDL"
+  ],
+  "license_information": "https://dumps.wikimedia.org/legal.html",
+  "attribution": "Article IDs, titles, and source URLs retained in raw and cleaned data"
+}
