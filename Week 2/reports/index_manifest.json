@@ -1,0 +1,12 @@
+{
+  "created_at_utc": "2026-10-18T08:21:21.039173+00:00",
+  "identity": {
+    "input_sha256": "550c9c0e989fc99544144424c9a252353ad8ac1211745f08b882d7d615166e48",
+    "embedding_model": "gemini-embedding-001",
+    "dimensions": 768,
+    "provider": "gemini",
+    "format_version": 1
+  },
+  "collection": "week2_2a35c168f96896e058280d87",
+  "chunk_count": 353
+}

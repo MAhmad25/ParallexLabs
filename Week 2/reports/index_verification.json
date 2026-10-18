@@ -1,0 +1,18 @@
+{
+  "created_at_utc": "2026-10-18T08:19:32.183950+00:00",
+  "status": "passed",
+  "collection": "week2_2a35c168f96896e058280d87",
+  "identity": {
+    "input_sha256": "550c9c0e989fc99544144424c9a252353ad8ac1211745f08b882d7d615166e48",
+    "embedding_model": "gemini-embedding-001",
+    "dimensions": 768,
+    "provider": "gemini",
+    "format_version": 1
+  },
+  "expected_chunks": 353,
+  "checked_chunks": 353,
+  "source_text_and_metadata_checked": true,
+  "vector_dimensions_finiteness_and_norm_checked": true,
+  "api_calls": 0,
+  "failures": []
+}

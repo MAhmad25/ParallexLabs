@@ -1,0 +1,19 @@
+{
+  "created_at_utc": "2026-10-18T08:23:00.649655+00:00",
+  "file": "artifacts/week2-populated-vector-db.zip",
+  "sha256": "2b622b8504086c39181029d474d145036e53ae9c7cd8131fd3d3141d0896e81e",
+  "bytes": 3437368,
+  "files": [
+    "chroma_db/6cf54676-694f-4bf1-a124-26ca433a825b/data_level0.bin",
+    "chroma_db/6cf54676-694f-4bf1-a124-26ca433a825b/header.bin",
+    "chroma_db/6cf54676-694f-4bf1-a124-26ca433a825b/length.bin",
+    "chroma_db/6cf54676-694f-4bf1-a124-26ca433a825b/link_lists.bin",
+    "chroma_db/chroma.sqlite3",
+    "data/processed/chunks.jsonl",
+    "reports/index_manifest.json",
+    "README.md"
+  ],
+  "zip_integrity": "passed",
+  "contains_secrets": false,
+  "note": "Local Git-ignored database package; extract into Week 2 with no active writers."
+}

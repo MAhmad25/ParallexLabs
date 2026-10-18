@@ -1,0 +1,15 @@
+.venv/
+.env
+.env.*
+!.env.example
+.cache/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+*.tmp
+data/**
+!data/processed/
+!data/processed/.gitkeep
+chroma_db/
+artifacts/

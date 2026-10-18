@@ -1,0 +1,61 @@
+{
+  "created_at_utc": "2026-10-18T08:11:59.015954+00:00",
+  "status": "failed",
+  "identity": {
+    "input_sha256": "550c9c0e989fc99544144424c9a252353ad8ac1211745f08b882d7d615166e48",
+    "embedding_model": "gemini-embedding-001",
+    "dimensions": 768,
+    "provider": "gemini",
+    "format_version": 1
+  },
+  "collection": "week2_2a35c168f96896e058280d87",
+  "expected_chunks": 353,
+  "batch_size": 16,
+  "already_present": 0,
+  "embedded_this_run": 96,
+  "batches": [
+    {
+      "batch": 1,
+      "chunks": 16,
+      "embedding_seconds": 1.7085144000011496,
+      "upsert_seconds": 0.3840876999893226
+    },
+    {
+      "batch": 2,
+      "chunks": 16,
+      "embedding_seconds": 1.4203391000046395,
+      "upsert_seconds": 0.17513779998989776
+    },
+    {
+      "batch": 3,
+      "chunks": 16,
+      "embedding_seconds": 1.4076978999655694,
+      "upsert_seconds": 0.08364500000607222
+    },
+    {
+      "batch": 4,
+      "chunks": 16,
+      "embedding_seconds": 1.4208922000252642,
+      "upsert_seconds": 0.10385470004985109
+    },
+    {
+      "batch": 5,
+      "chunks": 16,
+      "embedding_seconds": 1.4177870999556035,
+      "upsert_seconds": 0.11089529999298975
+    },
+    {
+      "batch": 6,
+      "chunks": 16,
+      "embedding_seconds": 1.399807299952954,
+      "upsert_seconds": 0.17836560000432655
+    }
+  ],
+  "embedding_seconds": 8.77503799990518,
+  "upsert_seconds": 1.03598610003246,
+  "stored_chunks": 96,
+  "failure_type": "RuntimeError",
+  "total_seconds": 17.251602500036824,
+  "finished_at_utc": "2026-10-18T08:12:16.352635+00:00",
+  "embedding_chunks_per_second": 10.940123564255487
+}

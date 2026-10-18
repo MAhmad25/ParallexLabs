@@ -1,0 +1,63 @@
+{
+  "created_at_utc": "2026-10-18T08:11:32.773667+00:00",
+  "status": "complete",
+  "strategy": "recursive-boundary-v1",
+  "config": {
+    "size": 1500,
+    "overlap": 200
+  },
+  "document_limit": 10,
+  "documents": [
+    {
+      "id": "12",
+      "title": "Anarchism"
+    },
+    {
+      "id": "39",
+      "title": "Albedo"
+    },
+    {
+      "id": "290",
+      "title": "A"
+    },
+    {
+      "id": "303",
+      "title": "Alabama"
+    },
+    {
+      "id": "305",
+      "title": "Achilles"
+    },
+    {
+      "id": "307",
+      "title": "Abraham Lincoln"
+    },
+    {
+      "id": "308",
+      "title": "Aristotle"
+    },
+    {
+      "id": "309",
+      "title": "An American in Paris"
+    },
+    {
+      "id": "316",
+      "title": "Academy Award for Best Production Design"
+    },
+    {
+      "id": "324",
+      "title": "Academy Awards"
+    }
+  ],
+  "document_count": 10,
+  "chunk_count": 353,
+  "min_chunk_chars": 434,
+  "max_chunk_chars": 1499,
+  "mean_chunk_chars": 1392.271954674221,
+  "chunking_seconds": 0.03000840003369376,
+  "chunks_per_second": 11763.372909040392,
+  "input_file": "clean_corpus.jsonl",
+  "input_sha256": "0e3df971f70e56038dfd3d94c3a4e09c1691c6a0e9974f8820d830d29bce7766",
+  "output_file": "chunks.jsonl",
+  "output_sha256": "550c9c0e989fc99544144424c9a252353ad8ac1211745f08b882d7d615166e48"
+}

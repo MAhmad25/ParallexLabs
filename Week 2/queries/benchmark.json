@@ -1,0 +1,10 @@
+[
+  {"id": "political-philosophy", "query": "Which political philosophy rejects the authority of the state?", "relevant_document_ids": ["12"]},
+  {"id": "reflected-sunlight", "query": "What measures the fraction of incoming sunlight reflected by a surface?", "relevant_document_ids": ["39"]},
+  {"id": "alphabet", "query": "What is the first letter of the Latin alphabet?", "relevant_document_ids": ["290"]},
+  {"id": "american-state", "query": "Which southeastern US state has Montgomery as its capital?", "relevant_document_ids": ["303"]},
+  {"id": "greek-hero", "query": "Who was the Greek hero of the Trojan War with a vulnerable heel?", "relevant_document_ids": ["305"]},
+  {"id": "american-president", "query": "Which American president led the country through the Civil War?", "relevant_document_ids": ["307"]},
+  {"id": "greek-philosopher", "query": "Which ancient Greek philosopher studied under Plato and taught Alexander?", "relevant_document_ids": ["308"]},
+  {"id": "film-awards", "query": "What are the annual film awards presented by the Academy of Motion Picture Arts and Sciences?", "relevant_document_ids": ["324"]}
+]

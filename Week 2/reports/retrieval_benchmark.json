@@ -1,0 +1,1080 @@
+{
+  "created_at_utc": "2026-10-18T08:19:37.235771+00:00",
+  "status": "complete",
+  "collection": "week2_2a35c168f96896e058280d87",
+  "identity": {
+    "input_sha256": "550c9c0e989fc99544144424c9a252353ad8ac1211745f08b882d7d615166e48",
+    "embedding_model": "gemini-embedding-001",
+    "dimensions": 768,
+    "provider": "gemini",
+    "format_version": 1
+  },
+  "indexed_chunks": 353,
+  "repeats": 3,
+  "warmups_per_query": 1,
+  "ks": [
+    1,
+    3,
+    5
+  ],
+  "query_embedding_cache": false,
+  "timing_unit": "milliseconds",
+  "p95_method": "nearest-rank",
+  "samples": [
+    {
+      "query_id": "political-philosophy",
+      "iteration": 1,
+      "embedding_ms": 425.80379999708384,
+      "vector_search_ms": 4.281200002878904,
+      "total_ms": 430.3732000407763,
+      "retrieved_document_ids": [
+        "12",
+        "12",
+        "12",
+        "12",
+        "12"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "political-philosophy",
+      "iteration": 2,
+      "embedding_ms": 586.5165000432171,
+      "vector_search_ms": 24.046799982897937,
+      "total_ms": 610.8976000105031,
+      "retrieved_document_ids": [
+        "12",
+        "12",
+        "12",
+        "12",
+        "12"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "political-philosophy",
+      "iteration": 3,
+      "embedding_ms": 865.159599983599,
+      "vector_search_ms": 4.2480999836698174,
+      "total_ms": 869.6004000375979,
+      "retrieved_document_ids": [
+        "12",
+        "12",
+        "12",
+        "12",
+        "12"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "reflected-sunlight",
+      "iteration": 1,
+      "embedding_ms": 729.5309000182897,
+      "vector_search_ms": 2.598599996417761,
+      "total_ms": 732.2491999948397,
+      "retrieved_document_ids": [
+        "39",
+        "39",
+        "39",
+        "39",
+        "39"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "reflected-sunlight",
+      "iteration": 2,
+      "embedding_ms": 585.9582999837585,
+      "vector_search_ms": 6.727700005285442,
+      "total_ms": 592.9636000073515,
+      "retrieved_document_ids": [
+        "39",
+        "39",
+        "39",
+        "39",
+        "39"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "reflected-sunlight",
+      "iteration": 3,
+      "embedding_ms": 450.6517999689095,
+      "vector_search_ms": 9.652900043874979,
+      "total_ms": 460.70950001012534,
+      "retrieved_document_ids": [
+        "39",
+        "39",
+        "39",
+        "39",
+        "39"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "alphabet",
+      "iteration": 1,
+      "embedding_ms": 633.0132000148296,
+      "vector_search_ms": 4.168400017078966,
+      "total_ms": 637.3755999957211,
+      "retrieved_document_ids": [
+        "290",
+        "290",
+        "290",
+        "290",
+        "290"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "alphabet",
+      "iteration": 2,
+      "embedding_ms": 644.7765000048093,
+      "vector_search_ms": 15.384099970106035,
+      "total_ms": 660.6787999626249,
+      "retrieved_document_ids": [
+        "290",
+        "290",
+        "290",
+        "290",
+        "290"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "alphabet",
+      "iteration": 3,
+      "embedding_ms": 412.7253000042401,
+      "vector_search_ms": 3.2914000330492854,
+      "total_ms": 416.1509000114165,
+      "retrieved_document_ids": [
+        "290",
+        "290",
+        "290",
+        "290",
+        "290"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "american-state",
+      "iteration": 1,
+      "embedding_ms": 623.770100006368,
+      "vector_search_ms": 3.5030999570153654,
+      "total_ms": 627.401200006716,
+      "retrieved_document_ids": [
+        "303",
+        "303",
+        "303",
+        "303",
+        "303"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "american-state",
+      "iteration": 2,
+      "embedding_ms": 420.0395999941975,
+      "vector_search_ms": 13.360300043132156,
+      "total_ms": 434.07949997344986,
+      "retrieved_document_ids": [
+        "303",
+        "303",
+        "303",
+        "303",
+        "303"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "american-state",
+      "iteration": 3,
+      "embedding_ms": 834.0582000091672,
+      "vector_search_ms": 6.545299955178052,
+      "total_ms": 840.8502999809571,
+      "retrieved_document_ids": [
+        "303",
+        "303",
+        "303",
+        "303",
+        "303"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "greek-hero",
+      "iteration": 1,
+      "embedding_ms": 483.1688000122085,
+      "vector_search_ms": 8.032399986404926,
+      "total_ms": 491.9048000010662,
+      "retrieved_document_ids": [
+        "305",
+        "305",
+        "305",
+        "305",
+        "305"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "greek-hero",
+      "iteration": 2,
+      "embedding_ms": 553.1252000364475,
+      "vector_search_ms": 4.2283000075258315,
+      "total_ms": 557.5078999972902,
+      "retrieved_document_ids": [
+        "305",
+        "305",
+        "305",
+        "305",
+        "305"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "greek-hero",
+      "iteration": 3,
+      "embedding_ms": 404.4638000195846,
+      "vector_search_ms": 14.583599986508489,
+      "total_ms": 419.5626999717206,
+      "retrieved_document_ids": [
+        "305",
+        "305",
+        "305",
+        "305",
+        "305"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "american-president",
+      "iteration": 1,
+      "embedding_ms": 409.6201999927871,
+      "vector_search_ms": 13.211900019086897,
+      "total_ms": 423.54609997710213,
+      "retrieved_document_ids": [
+        "307",
+        "307",
+        "307",
+        "307",
+        "307"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "american-president",
+      "iteration": 2,
+      "embedding_ms": 594.0088999923319,
+      "vector_search_ms": 8.416700002271682,
+      "total_ms": 602.6827999739908,
+      "retrieved_document_ids": [
+        "307",
+        "307",
+        "307",
+        "307",
+        "307"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "american-president",
+      "iteration": 3,
+      "embedding_ms": 399.8631999711506,
+      "vector_search_ms": 10.52390004042536,
+      "total_ms": 410.924400028307,
+      "retrieved_document_ids": [
+        "307",
+        "307",
+        "307",
+        "307",
+        "307"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "greek-philosopher",
+      "iteration": 1,
+      "embedding_ms": 409.14509998401627,
+      "vector_search_ms": 13.200899993535131,
+      "total_ms": 422.81160003039986,
+      "retrieved_document_ids": [
+        "308",
+        "308",
+        "308",
+        "308",
+        "308"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "greek-philosopher",
+      "iteration": 2,
+      "embedding_ms": 537.2500999947079,
+      "vector_search_ms": 3.5401000059209764,
+      "total_ms": 540.9319000318646,
+      "retrieved_document_ids": [
+        "308",
+        "308",
+        "308",
+        "308",
+        "308"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "greek-philosopher",
+      "iteration": 3,
+      "embedding_ms": 420.73750001145527,
+      "vector_search_ms": 8.472699963022023,
+      "total_ms": 429.5080999727361,
+      "retrieved_document_ids": [
+        "308",
+        "308",
+        "308",
+        "308",
+        "308"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "film-awards",
+      "iteration": 1,
+      "embedding_ms": 453.8655999931507,
+      "vector_search_ms": 3.786000015679747,
+      "total_ms": 457.8734000097029,
+      "retrieved_document_ids": [
+        "324",
+        "324",
+        "324",
+        "324",
+        "324"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "film-awards",
+      "iteration": 2,
+      "embedding_ms": 518.7467999639921,
+      "vector_search_ms": 12.981700012460351,
+      "total_ms": 532.1939999703318,
+      "retrieved_document_ids": [
+        "324",
+        "324",
+        "324",
+        "324",
+        "324"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "query_id": "film-awards",
+      "iteration": 3,
+      "embedding_ms": 444.4120000116527,
+      "vector_search_ms": 9.978800022508949,
+      "total_ms": 454.9125999910757,
+      "retrieved_document_ids": [
+        "324",
+        "324",
+        "324",
+        "324",
+        "324"
+      ],
+      "metrics": {
+        "1": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "3": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "5": {
+          "hit": 1.0,
+          "document_recall": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    }
+  ],
+  "queries": [
+    {
+      "id": "political-philosophy",
+      "query": "Which political philosophy rejects the authority of the state?",
+      "relevant_document_ids": [
+        "12"
+      ],
+      "latency_ms": {
+        "embedding_ms": {
+          "count": 3,
+          "min": 425.80379999708384,
+          "mean": 625.8266333413,
+          "median": 586.5165000432171,
+          "p95": 865.159599983599,
+          "max": 865.159599983599
+        },
+        "vector_search_ms": {
+          "count": 3,
+          "min": 4.2480999836698174,
+          "mean": 10.858699989815554,
+          "median": 4.281200002878904,
+          "p95": 24.046799982897937,
+          "max": 24.046799982897937
+        },
+        "total_ms": {
+          "count": 3,
+          "min": 430.3732000407763,
+          "mean": 636.9570666962924,
+          "median": 610.8976000105031,
+          "p95": 869.6004000375979,
+          "max": 869.6004000375979
+        }
+      }
+    },
+    {
+      "id": "reflected-sunlight",
+      "query": "What measures the fraction of incoming sunlight reflected by a surface?",
+      "relevant_document_ids": [
+        "39"
+      ],
+      "latency_ms": {
+        "embedding_ms": {
+          "count": 3,
+          "min": 450.6517999689095,
+          "mean": 588.7136666569859,
+          "median": 585.9582999837585,
+          "p95": 729.5309000182897,
+          "max": 729.5309000182897
+        },
+        "vector_search_ms": {
+          "count": 3,
+          "min": 2.598599996417761,
+          "mean": 6.3264000151927275,
+          "median": 6.727700005285442,
+          "p95": 9.652900043874979,
+          "max": 9.652900043874979
+        },
+        "total_ms": {
+          "count": 3,
+          "min": 460.70950001012534,
+          "mean": 595.3074333374389,
+          "median": 592.9636000073515,
+          "p95": 732.2491999948397,
+          "max": 732.2491999948397
+        }
+      }
+    },
+    {
+      "id": "alphabet",
+      "query": "What is the first letter of the Latin alphabet?",
+      "relevant_document_ids": [
+        "290"
+      ],
+      "latency_ms": {
+        "embedding_ms": {
+          "count": 3,
+          "min": 412.7253000042401,
+          "mean": 563.5050000079597,
+          "median": 633.0132000148296,
+          "p95": 644.7765000048093,
+          "max": 644.7765000048093
+        },
+        "vector_search_ms": {
+          "count": 3,
+          "min": 3.2914000330492854,
+          "mean": 7.614633340078096,
+          "median": 4.168400017078966,
+          "p95": 15.384099970106035,
+          "max": 15.384099970106035
+        },
+        "total_ms": {
+          "count": 3,
+          "min": 416.1509000114165,
+          "mean": 571.4017666565875,
+          "median": 637.3755999957211,
+          "p95": 660.6787999626249,
+          "max": 660.6787999626249
+        }
+      }
+    },
+    {
+      "id": "american-state",
+      "query": "Which southeastern US state has Montgomery as its capital?",
+      "relevant_document_ids": [
+        "303"
+      ],
+      "latency_ms": {
+        "embedding_ms": {
+          "count": 3,
+          "min": 420.0395999941975,
+          "mean": 625.9559666699109,
+          "median": 623.770100006368,
+          "p95": 834.0582000091672,
+          "max": 834.0582000091672
+        },
+        "vector_search_ms": {
+          "count": 3,
+          "min": 3.5030999570153654,
+          "mean": 7.802899985108525,
+          "median": 6.545299955178052,
+          "p95": 13.360300043132156,
+          "max": 13.360300043132156
+        },
+        "total_ms": {
+          "count": 3,
+          "min": 434.07949997344986,
+          "mean": 634.1103333203743,
+          "median": 627.401200006716,
+          "p95": 840.8502999809571,
+          "max": 840.8502999809571
+        }
+      }
+    },
+    {
+      "id": "greek-hero",
+      "query": "Who was the Greek hero of the Trojan War with a vulnerable heel?",
+      "relevant_document_ids": [
+        "305"
+      ],
+      "latency_ms": {
+        "embedding_ms": {
+          "count": 3,
+          "min": 404.4638000195846,
+          "mean": 480.2526000227469,
+          "median": 483.1688000122085,
+          "p95": 553.1252000364475,
+          "max": 553.1252000364475
+        },
+        "vector_search_ms": {
+          "count": 3,
+          "min": 4.2283000075258315,
+          "mean": 8.94809999347975,
+          "median": 8.032399986404926,
+          "p95": 14.583599986508489,
+          "max": 14.583599986508489
+        },
+        "total_ms": {
+          "count": 3,
+          "min": 419.5626999717206,
+          "mean": 489.6584666566923,
+          "median": 491.9048000010662,
+          "p95": 557.5078999972902,
+          "max": 557.5078999972902
+        }
+      }
+    },
+    {
+      "id": "american-president",
+      "query": "Which American president led the country through the Civil War?",
+      "relevant_document_ids": [
+        "307"
+      ],
+      "latency_ms": {
+        "embedding_ms": {
+          "count": 3,
+          "min": 399.8631999711506,
+          "mean": 467.83076665208984,
+          "median": 409.6201999927871,
+          "p95": 594.0088999923319,
+          "max": 594.0088999923319
+        },
+        "vector_search_ms": {
+          "count": 3,
+          "min": 8.416700002271682,
+          "mean": 10.717500020594647,
+          "median": 10.52390004042536,
+          "p95": 13.211900019086897,
+          "max": 13.211900019086897
+        },
+        "total_ms": {
+          "count": 3,
+          "min": 410.924400028307,
+          "mean": 479.0510999931333,
+          "median": 423.54609997710213,
+          "p95": 602.6827999739908,
+          "max": 602.6827999739908
+        }
+      }
+    },
+    {
+      "id": "greek-philosopher",
+      "query": "Which ancient Greek philosopher studied under Plato and taught Alexander?",
+      "relevant_document_ids": [
+        "308"
+      ],
+      "latency_ms": {
+        "embedding_ms": {
+          "count": 3,
+          "min": 409.14509998401627,
+          "mean": 455.7108999967265,
+          "median": 420.73750001145527,
+          "p95": 537.2500999947079,
+          "max": 537.2500999947079
+        },
+        "vector_search_ms": {
+          "count": 3,
+          "min": 3.5401000059209764,
+          "mean": 8.404566654159376,
+          "median": 8.472699963022023,
+          "p95": 13.200899993535131,
+          "max": 13.200899993535131
+        },
+        "total_ms": {
+          "count": 3,
+          "min": 422.81160003039986,
+          "mean": 464.41720001166686,
+          "median": 429.5080999727361,
+          "p95": 540.9319000318646,
+          "max": 540.9319000318646
+        }
+      }
+    },
+    {
+      "id": "film-awards",
+      "query": "What are the annual film awards presented by the Academy of Motion Picture Arts and Sciences?",
+      "relevant_document_ids": [
+        "324"
+      ],
+      "latency_ms": {
+        "embedding_ms": {
+          "count": 3,
+          "min": 444.4120000116527,
+          "mean": 472.34146665626514,
+          "median": 453.8655999931507,
+          "p95": 518.7467999639921,
+          "max": 518.7467999639921
+        },
+        "vector_search_ms": {
+          "count": 3,
+          "min": 3.786000015679747,
+          "mean": 8.915500016883016,
+          "median": 9.978800022508949,
+          "p95": 12.981700012460351,
+          "max": 12.981700012460351
+        },
+        "total_ms": {
+          "count": 3,
+          "min": 454.9125999910757,
+          "mean": 481.6599999903701,
+          "median": 457.8734000097029,
+          "p95": 532.1939999703318,
+          "max": 532.1939999703318
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "latency_ms": {
+    "embedding_ms": {
+      "count": 24,
+      "min": 399.8631999711506,
+      "mean": 535.0171250004981,
+      "median": 500.9577999881003,
+      "p95": 834.0582000091672,
+      "max": 865.159599983599
+    },
+    "vector_search_ms": {
+      "count": 24,
+      "min": 2.598599996417761,
+      "mean": 8.698537501913961,
+      "median": 8.224549994338304,
+      "p95": 15.384099970106035,
+      "max": 24.046799982897937
+    },
+    "total_ms": {
+      "count": 24,
+      "min": 410.924400028307,
+      "mean": 544.0704208328194,
+      "median": 512.049399985699,
+      "p95": 840.8502999809571,
+      "max": 869.6004000375979
+    }
+  },
+  "quality": {
+    "1": {
+      "hit": 1.0,
+      "document_recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    "3": {
+      "hit": 1.0,
+      "document_recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    "5": {
+      "hit": 1.0,
+      "document_recall": 1.0,
+      "reciprocal_rank": 1.0
+    }
+  },
+  "finished_at_utc": "2026-10-18T08:19:56.038018+00:00"
+}

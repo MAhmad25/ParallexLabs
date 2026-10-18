@@ -1,0 +1,104 @@
+{
+  "created_at_utc": "2026-10-18T08:23:00.296520+00:00",
+  "status": "passed",
+  "python": "3.12.12",
+  "package_versions": {
+    "chromadb": "1.5.9",
+    "google-genai": "2.31.0",
+    "pytest": "9.1.1",
+    "ruff": "0.17.1"
+  },
+  "tests": {
+    "tests": 89,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "network_required": false,
+    "embedding_doubles": "test-only"
+  },
+  "checks": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "uv_sync_locked_offline": "passed",
+    "uv_pip_check": "passed",
+    "git_diff_check": "passed"
+  },
+  "live_gemini": {
+    "embedding_model": "gemini-embedding-001",
+    "dimensions": 768,
+    "chunks": 353,
+    "successful_embedding_seconds_across_attempts": 38.41667779994896,
+    "successful_embedding_chunks_per_second": 9.188717510613815,
+    "initial_rate_limit_recovered": true,
+    "resumed_chunks": 257,
+    "idempotent_rerun_new_embeddings": 0
+  },
+  "database_verification": {
+    "status": "passed",
+    "checked_chunks": 353
+  },
+  "live_retrieval": {
+    "query_count": 8,
+    "measured_samples": 24,
+    "latency_ms": {
+      "embedding_ms": {
+        "count": 24,
+        "min": 399.8631999711506,
+        "mean": 535.0171250004981,
+        "median": 500.9577999881003,
+        "p95": 834.0582000091672,
+        "max": 865.159599983599
+      },
+      "vector_search_ms": {
+        "count": 24,
+        "min": 2.598599996417761,
+        "mean": 8.698537501913961,
+        "median": 8.224549994338304,
+        "p95": 15.384099970106035,
+        "max": 24.046799982897937
+      },
+      "total_ms": {
+        "count": 24,
+        "min": 410.924400028307,
+        "mean": 544.0704208328194,
+        "median": 512.049399985699,
+        "p95": 840.8502999809571,
+        "max": 869.6004000375979
+      }
+    },
+    "quality": {
+      "1": {
+        "hit": 1.0,
+        "document_recall": 1.0,
+        "reciprocal_rank": 1.0
+      },
+      "3": {
+        "hit": 1.0,
+        "document_recall": 1.0,
+        "reciprocal_rank": 1.0
+      },
+      "5": {
+        "hit": 1.0,
+        "document_recall": 1.0,
+        "reciprocal_rank": 1.0
+      }
+    }
+  },
+  "live_llm": {
+    "status": "passed",
+    "model": "gemini-flash-latest",
+    "question": "Who taught Alexander the Great?",
+    "answer": "Based on the retrieved sources, **Aristotle** taught (tutored) Alexander the Great [1][2].",
+    "generation_ms": 37818.68090003263,
+    "source_titles": [
+      "Aristotle",
+      "Aristotle",
+      "Aristotle"
+    ]
+  },
+  "limitations": [
+    "Live index is the first 10 articles, not the entire Week 1 corpus",
+    "Eight manually labeled queries are a small retrieval smoke benchmark",
+    "24 Chroma legacy-config deprecation warnings are dependency warnings"
+  ]
+}
