@@ -1,7 +1,8 @@
 # ParallexLabs
 
-Weekly coursework projects. This folder is the Git repository; each week's code
-and Python environment live in a separate subfolder.
+This repository contains my weekly coursework projects. I use uv for Python
+package management and keep each week's code, tests, reports, and environment in
+its own folder.
 
 ```text
 ParallexLabs/
@@ -28,13 +29,16 @@ ParallexLabs/
     └── reports/
 ```
 
-[Week 1 setup, results, and run instructions](Week%201/README.md): Wikipedia
-ingestion and preprocessing with uv, 50 passing tests, and 5,936 validated
-English documents. CUDA verification remains pending on compatible NVIDIA hardware.
+In [Week 1](Week%201/README.md), I built a Wikipedia ingestion and preprocessing
+pipeline, retained 5,936 validated English documents, and added 50 passing tests.
+I verified the CPU workflow. CUDA testing remains pending because my machine has
+Intel UHD Graphics 620 rather than an NVIDIA GPU.
 
-[Week 2 setup, benchmarks, and run instructions](Week%202/README.md): tested text
-chunking, Gemini-only embeddings and optional LLM answers, persistent ChromaDB,
-and latency/relevance benchmarks using the Week 1 corpus.
+In [Week 2](Week%202/README.md), I added text chunking, Gemini embeddings, persistent
+ChromaDB storage, semantic search, and optional Gemini answers. I indexed the first
+10 cleaned articles as 353 vectors and measured retrieval across eight queries.
+The project has 89 passing tests. Each week's README explains my approach and
+includes setup instructions, measured results, and limitations.
 
 ## Git commands
 
@@ -54,8 +58,8 @@ git commit -m "Update weekly coursework"
 git push origin main
 ```
 
-Environments, caches, secrets, and dataset contents are ignored. Data remains
-available locally and can be recreated using the Week 1 README.
+I keep environments, caches, API keys, datasets, and databases out of Git. The data
+is available locally and can be recreated using the weekly READMEs.
 
 ## Run Week 1
 

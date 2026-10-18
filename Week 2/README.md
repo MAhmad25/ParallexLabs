@@ -2,19 +2,18 @@
 
 **October 12–18, 2026 · Python 3.12.12 · uv · Gemini · ChromaDB**
 
-This project extends Week 1's validated Wikipedia preprocessing pipeline into a
-persistent semantic retrieval system. It chunks the cleaned articles, creates real
-Gemini embeddings, stores vectors and source metadata in ChromaDB, searches by meaning,
-and measures retrieval latency and relevance. An optional command generates a cited
-answer using a Gemini LLM and the retrieved excerpts.
+For Week 2, I extended my Week 1 preprocessing work into a semantic search pipeline.
+I split the cleaned Wikipedia articles into overlapping chunks, generated embeddings
+with Gemini, and stored the vectors and source metadata in ChromaDB. I then tested
+the chunking and database handling and benchmarked retrieval across eight queries.
+I also added an optional Gemini answer step that cites the retrieved passages.
 
-**Provider choice:** the assignment mentions sentence-transformers, but the explicit
-instruction for this submission is to use Gemini for embeddings and LLM calls.
-Consequently, production code uses **Gemini only**, with no local model fallback.
-Chroma's automatic embedding function is explicitly disabled. Mock vectors appear
-only in isolated tests and are never written to the submitted live database.
+I used Gemini for both embeddings and answer generation. The default embedding
+model is `gemini-embedding-001` with 768 dimensions. I disabled Chroma's automatic
+embedding function so stored vectors and query vectors use the same Gemini
+configuration. The offline tests use separate temporary databases and test vectors.
 
-## Deliverables and evidence
+## What I built
 
 | Task | Implementation |
 | --- | --- |
@@ -28,7 +27,7 @@ only in isolated tests and are never written to the submitted live database.
 | LLM | Optional source-grounded Gemini answer with numbered citations |
 | Reproducibility | Python pin, `uv.lock`, hashed requirements export, offline tests, provenance hashes |
 
-## Verified results — October 18, 2026
+## My results — October 18, 2026
 
 | Check | Measured result |
 | --- | --- |
@@ -49,7 +48,7 @@ only in isolated tests and are never written to the submitted live database.
 | Hit@1, document Recall@1, MRR@1 | **1.00** for this small labeled query set |
 | Optional Gemini LLM | Live grounded-answer check; see verification summary |
 
-Evidence: [chunking](reports/chunking_report.json),
+I saved my results in these reports: [chunking](reports/chunking_report.json),
 [initial interrupted ingestion](reports/ingestion_first_attempt.json),
 [completed ingestion](reports/ingestion_report.json),
 [active manifest](reports/index_manifest.json),
@@ -58,17 +57,18 @@ Evidence: [chunking](reports/chunking_report.json),
 [test results](reports/pytest_results.xml), and
 [combined verification](reports/verification_summary.json).
 
-The embedding total sums successful batch timings from the initial and resumed
-attempts. It excludes the failed API call and its retry waits; the individual
-reports preserve each run's total wall time. Benchmark numbers are real network
-measurements, not results from mocked test embeddings.
+My first ingestion attempt stored 96 chunks before Gemini returned HTTP 429.
+I resumed with a 12-second interval between batches and stored the remaining 257.
+The embedding total sums successful batch timings from both attempts. It excludes
+the failed API call and its retry waits; each report also records total runtime.
+The retrieval timings come from queries against the Gemini-backed database.
 
 ## Layout
 
 ```text
-ParallexLabs/                       # One existing Git repository
-├── Week 1/                         # Existing preprocessing project
-└── Week 2/                         # Independent uv project, no nested .git
+ParallexLabs/                       # My weekly projects
+├── Week 1/                         # Preprocessing
+└── Week 2/                         # Chunking and retrieval
     ├── .env.example                # Configuration names; never a real key
     ├── .python-version
     ├── pyproject.toml
@@ -100,10 +100,11 @@ Set-Location 'D:\ParallexLabs\Week 2'
 uv sync --locked
 ```
 
-uv selects Python 3.12.12 using `.python-version` and installs locked dependencies into
-this folder's `.venv`. No CUDA GPU or downloaded transformer model is needed. Main
-dependencies are ChromaDB, the Google Gen AI SDK, httpx, and python-dotenv. pytest and
-Ruff are development dependencies.
+I used Python 3.12.12 and uv to keep the environment reproducible. uv reads the
+interpreter pin from `.python-version` and installs locked packages into this
+folder's `.venv`. The main dependencies are ChromaDB, the Google Gen AI SDK, httpx,
+and python-dotenv. I used pytest for tests and Ruff for linting and formatting.
+Embedding and LLM inference run through Gemini, so no local GPU is needed.
 
 For a fresh checkout, create the local configuration once:
 
@@ -122,10 +123,10 @@ GEMINI_EMBEDDING_DIMENSIONS=768
 GEMINI_LLM_MODEL=gemini-flash-latest
 ```
 
-An existing `.env` is already configured on the development machine. Do not overwrite
-it with the example. Shell variables take precedence over `.env`; `GOOGLE_API_KEY`
-is also accepted when `GEMINI_API_KEY` is absent. Only the Week 2 `.env` is loaded.
-API access, quota, and any billing belong to the supplied Google project.
+I keep the API key in the ignored `.env` file. An existing configuration can be
+reused without copying the example again. Shell variables take precedence over
+`.env`, and `GOOGLE_API_KEY` is accepted when `GEMINI_API_KEY` is absent. The
+application loads only Week 2's `.env`.
 
 ## Run the workflow
 
@@ -149,8 +150,8 @@ Set-Location '..\Week 2'
 uv run --locked python -m scripts.chunk_corpus
 ```
 
-The default uses the **first 10 articles**, yielding a manageable live API assignment
-run. All eight benchmark labels refer to this subset. The output is
+I used the **first 10 articles** to keep the embedding run within the available API
+quota. All eight benchmark labels refer to this subset. The output is
 `data/processed/chunks.jsonl`; its counts, source SHA-256, output SHA-256, settings,
 article IDs, sizes, and measured chunking time are in `reports/chunking_report.json`.
 
@@ -161,8 +162,8 @@ uv run --locked python -m scripts.chunk_corpus --limit 0 --output data/processed
 ```
 
 `--chunk-size 1500`, `--overlap 200`, `--limit N`, and `--input PATH` are configurable.
-`--limit 0` means all articles. Full-corpus embedding is a separate, larger API
-workload; chunking the corpus alone does not claim every article was embedded.
+`--limit 0` means all articles. Embedding the complete corpus requires a separate
+ingestion run and more API quota.
 
 ### 3. Generate embeddings and populate ChromaDB
 
@@ -171,9 +172,9 @@ uv run --locked python -m scripts.ingest
 uv run --locked python -m scripts.verify_index
 ```
 
-Defaults: 16 chunks per batch, 12 seconds between batch starts, Gemini
-`gemini-embedding-001`, and 768 dimensions. This pacing accommodates smaller quotas;
-actual quotas vary. Increase `--request-interval` up to 60 seconds or reduce
+I configured ingestion to use 16 chunks per batch, 12 seconds between batch starts,
+`gemini-embedding-001`, and 768 dimensions. This interval helped avoid further rate
+limits during my run. Increase `--request-interval` up to 60 seconds or reduce
 `--batch-size` if necessary. `--request-interval 0` disables pacing for a project
 with sufficient quota.
 
@@ -222,11 +223,11 @@ This command is optional; semantic search itself does not call an LLM.
 uv run --locked python -m scripts.benchmark_retrieval
 ```
 
-Defaults: eight different queries, one excluded warmup per query, three measured
-runs per query, and quality evaluation at k = 1, 3, 5. This produces **24 measured
-samples** plus eight warmups. Query embeddings are regenerated for every sample;
-there is no embedding cache. The database and client are already open, so process
-startup and database-opening time are excluded.
+I wrote eight queries with manually labeled relevant article IDs. For each query,
+I ran one warmup followed by three measured searches and evaluated results at
+k = 1, 3, and 5. This produced **24 measured samples** plus eight excluded warmups.
+Each search generated a fresh query embedding. I measured retrieval after opening
+the database and client, so startup and database-opening time are excluded.
 
 `reports/retrieval_benchmark.json` preserves every raw sample, query labels,
 retrieved document IDs, per-query latency summaries, global summaries, failures,
@@ -243,12 +244,11 @@ and aggregate relevance metrics:
 | Document Recall@k | Fraction of distinct labeled articles retrieved; repeated chunks count once |
 | MRR@k | Reciprocal rank of the first relevant chunk, averaged over samples |
 
-All three k metrics are computed from the same top-5 lookup; they are **not separate
-latency measurements for each k**. Each default query has one labeled relevant
-article, so Hit@k and Document Recall@k coincide for this query set. Labels are
-manual article-level checks, not exhaustive chunk-level relevance judgments. The
-small first-N corpus and eight queries are a smoke benchmark, not a general search
-quality claim. Missing labeled documents fail before any query API requests.
+I calculated all three k metrics from the same top-5 lookup. Each query has one
+labeled relevant article, so Hit@k and document Recall@k have the same value for
+this query set. The labels check article relevance rather than individual chunks.
+These results cover a small corpus and eight queries; broader evaluation would
+need more varied data. The script rejects missing labels before making API requests.
 
 Custom benchmark:
 
@@ -262,9 +262,10 @@ Use `--queries PATH` and labels that exist in the indexed corpus.
 
 ## Chunking strategy
 
-The splitter uses a maximum **1,500-character window** and **200-character raw
-overlap**. Within each window it recursively searches for the last suitable
-paragraph break, newline, sentence ending (`. `, `! `, `? `), and space, in that
+I chose a maximum **1,500-character window** with **200-character raw overlap**
+to retain context across chunk boundaries. Within each window, the splitter
+recursively searches for the last suitable paragraph break, newline, sentence
+ending (`. `, `! `, `? `), and space, in that
 priority order. If none is suitable, it cuts at the character boundary. Boundaries
 are searched in the latter half of the window, beyond the requested overlap, to
 avoid tiny chunks and guarantee forward progress.
@@ -328,8 +329,8 @@ uv run --locked ruff format --check .
 uv pip check
 ```
 
-Tests run without credentials or internet. They cover Unicode, whitespace,
-unbroken text, overlap boundaries, randomized non-whitespace coverage, source
+I wrote the tests to run without credentials or internet. They cover Unicode,
+whitespace, unbroken text, overlap boundaries, randomized non-whitespace coverage, source
 offsets/hashes, stable IDs, invalid input, atomic output, Gemini task configuration,
 Embedding 2 aggregation avoidance, normalization, malformed responses, retry
 limits, safe errors, real persistent Chroma queries, batch duplicates, incompatible
@@ -346,27 +347,25 @@ uv export --locked --format requirements.txt --all-groups --no-emit-project --ou
 
 Normal setup uses `uv sync --locked`; do not manually edit lock files.
 
-## Provenance, submission, and limitations
+## Data and limitations
 
 Input comes from the Week 1 `wikimedia/wikipedia` dataset, configuration
 `20231101.en`, pinned revision `b04c8d1ceb2f5cd4588862100d08de323dccfbaa`.
-The complete Week 1 corpus contains 5,936 accepted articles. The indexed submission
-subset is explicitly recorded in the chunking report. First-N sampling is
+My complete Week 1 corpus contains 5,936 accepted articles. I recorded the 10 indexed
+articles in the chunking report. First-N sampling is
 reproducible but not representative of Wikipedia. Article titles and URLs remain
 attached to retrieved excerpts. Upstream CC-BY-SA/GFDL attribution and share-alike
 terms still apply; see [Week 1 provenance](../Week%201/README.md).
 
-This folder belongs to the existing `MAhmad25/ParallexLabs` repository. Run Git
-commands from `D:\ParallexLabs`. Code, tests, locks, labels, documentation, and
-verification reports are suitable for Git. Secrets, environments, dataset bodies,
-and live database files remain local and ignored. A fresh clone rebuilds the
-database using the workflow above and a valid Gemini key. If a submission portal
-requires the populated database itself, submit the local `chroma_db/` directory
-separately with the manifest; close database-using processes before copying it.
-For this run, `artifacts/week2-populated-vector-db.zip` is a local, Git-ignored
-submission package containing the populated database, matching chunk JSONL,
-manifest, and README. Its file list and SHA-256 are recorded in
-`reports/submission_artifact.json`. It contains no API key or environment files.
+I kept this project in my `MAhmad25/ParallexLabs` repository alongside Week 1.
+The repository tracks the code, tests, dependency locks, query labels, and reports.
+API keys, environments, generated text, and database files remain local and ignored.
+A fresh clone can rebuild the database using the workflow above and a valid Gemini key.
+
+I also packaged the populated database, chunk JSONL, manifest, and this README in
+`artifacts/week2-populated-vector-db.zip`. I verified the database after extracting
+the package. The file list and hash are in `reports/submission_artifact.json`, and
+the extracted database check is in `reports/package_verification.json`.
 
 API latency depends on quota, network conditions, Google's service, and retry
 behavior. Tests and benchmarks do not establish production-scale retrieval quality,

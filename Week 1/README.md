@@ -2,18 +2,17 @@
 
 **Week:** October 5–11, 2026. **Package manager:** [uv](https://docs.astral.sh/uv/).
 
-This project acquires real Wikipedia articles, cleans them with reusable Python functions,
-filters for English, removes exact duplicates, and validates the resulting corpus. It includes
-a local Git repository, a Python 3.12 virtual environment, dependency locks, unit tests, and
-machine-readable reports.
+For Week 1, I built a pipeline to download Wikipedia articles, clean their text,
+filter for English, remove exact duplicates, and validate the output. I used uv
+with Python 3.12, separated the processing functions into modules, and wrote tests
+and JSON reports to check the results.
 
-**Hardware limitation:** the development PC has Intel UHD Graphics 620 graphics and no NVIDIA
-CUDA GPU. CPU imports and processing can be verified here, but the assignment's CUDA requirement
-requires a separate machine with compatible NVIDIA hardware. The default environment check
-fails when CUDA is unavailable. `--allow-cpu` permits CPU work and explicitly records
-`assignment_gpu_requirement_met: false`; it does not claim GPU verification.
+My machine has Intel UHD Graphics 620 and no NVIDIA GPU, so I ran and verified the
+CPU workflow using `--allow-cpu`. CUDA testing remains pending on compatible
+hardware. The environment report records `assignment_gpu_requirement_met: false`,
+and the strict environment check fails when CUDA is unavailable.
 
-## What was built
+## What I built
 
 | Requirement | Implementation |
 | --- | --- |
@@ -27,10 +26,10 @@ fails when CUDA is unavailable. `--allow-cpu` permits CPU work and explicitly re
 | Clean dataset | `data/processed/clean_corpus.jsonl`; optional Parquet output |
 | Validated deliverable | `scripts/validate_dataset.py` checks every record and requires 5,000+ rows |
 
-Actual execution results, including counts, hashes, package versions, and GPU status, are saved
-under `reports/`. Data files exist locally and are intentionally excluded from Git.
+I saved document counts, hashes, package versions, and hardware checks under
+`reports/`. I keep generated data locally and exclude it from Git.
 
-## Verified results — October 11, 2026
+## My results — October 11, 2026
 
 | Check | Measured result |
 | --- | --- |
@@ -45,24 +44,25 @@ under `reports/`. Data files exist locally and are intentionally excluded from G
 | Ruff lint and formatting | Passed |
 | CUDA verification | Hardware requirement remains unmet on Intel UHD Graphics 620 |
 
-The pipeline rejected 64 articles: 41 for language confidence below 0.90, 17 for a different
-detected language, and 6 for fewer than 100 characters. No accepted articles were exact duplicates.
-The validator independently checked every cleaned record and confirmed the same output SHA-256
-as the preprocessing report.
+I downloaded 6,000 articles and retained 5,936 after cleaning and filtering. The
+pipeline rejected 64: 41 for language confidence below 0.90, 17 for a different
+detected language, and 6 for fewer than 100 characters. No accepted articles were
+exact duplicates. I then ran the independent validator over every cleaned record
+and checked that its output SHA-256 matched the preprocessing report.
 
-Evidence: [environment](reports/environment_report.json),
+My saved reports: [environment](reports/environment_report.json),
 [strict CUDA check](reports/environment_strict.json),
 [dataset provenance](reports/dataset_provenance.json),
 [cleaning counts](reports/preprocessing_report.json),
 [validation](reports/validation_report.json), [tests](reports/pytest_results.xml),
 [installation](reports/installation_report.json), and [combined summary](reports/verification_summary.json).
 
-Package downloads needed recovery from transient DNS failures and slow transfers. The exact
-locked artifacts were downloaded into the ignored local `.cache/wheels` directory, including
-a public PyPI mirror fallback, and all SHA-256 values were checked against `uv.lock`. Installation
-then used `uv pip sync --require-hashes --no-index --find-links .cache/wheels --link-mode copy requirements.txt`.
-The normal `uv sync --locked --offline` check and `uv pip check` subsequently passed. A fresh
-machine can use the normal online setup instructions below.
+During setup, I encountered DNS failures and slow package downloads. I recovered
+the locked wheels in `.cache/wheels`, checked their SHA-256 values against
+`uv.lock`, and installed them using
+`uv pip sync --require-hashes --no-index --find-links .cache/wheels --link-mode copy requirements.txt`.
+The locked offline sync and dependency checks then passed. The normal online
+setup commands are listed below.
 
 ## Project layout
 
@@ -111,10 +111,10 @@ sentence-transformers), Beautiful Soup, langdetect, Hugging Face Datasets, and P
 Development dependencies: pytest and Ruff. No API key, `.env`, paid service, or spaCy language
 model is needed for the Week 1 workflow.
 
-The project was initialized using `uv init --bare --name week-1 --python 3.12 --vcs git`,
-followed by `uv python pin`, `uv add`, `uv add --dev`, and `uv sync`. Git ownership now
-resides in the parent `ParallexLabs` folder so all weeks can be uploaded together.
-Run Git commands from `D:\ParallexLabs`; run uv commands from this weekly project folder.
+I initialized the uv project, pinned Python, added the dependencies, and synced
+the environment. I keep Git in the parent `ParallexLabs` folder so the weekly
+projects share one repository. Run Git commands from `D:\ParallexLabs` and uv
+commands from the relevant weekly folder.
 
 To regenerate the required exported lock after a deliberate dependency update:
 
@@ -137,7 +137,7 @@ Use `uv sync --locked` for the normal project workflow. Do not manually edit `uv
 
 ### 1. Verify the environment
 
-Strict assignment check (requires working CUDA and returns exit code 1 when missing):
+Strict environment check (requires working CUDA and returns exit code 1 when missing):
 
 ```powershell
 uv run --locked python scripts/verify_env.py --output reports/environment_strict.json
@@ -197,7 +197,7 @@ uv run --locked python scripts/validate_dataset.py --input data/processed/clean_
 ```
 
 JSONL processing writes one article at a time; Parquet output collects accepted records before
-writing with PyArrow. The latter is appropriate for this 6,000-article assignment.
+writing with PyArrow. The latter is appropriate for this 6,000-article dataset.
 
 ### 4. Validate and test
 
@@ -223,7 +223,10 @@ CPU/GPU exit-code semantics. Tests use local fixtures and need no internet.
 If you change filtering thresholds, pass the same `--language`, `--min-chars`, and
 `--min-confidence` options to preprocessing and validation.
 
-## Cleaning approach
+## My cleaning approach
+
+I kept the cleaning functions separate so I could test each step and inspect why a
+document was rejected. The pipeline follows these steps:
 
 1. Normalize compatibility characters with Unicode NFKC. Remove invisible formatting
    characters, replace zero-width spaces with word boundaries, and remove invalid surrogates.
@@ -262,21 +265,20 @@ NFKC deliberately folds compatibility characters and can alter specialized typog
 The 6,000-document acquisition provides headroom for rejected articles, while validation
 enforces the required final minimum instead of assuming every downloaded article survives.
 
-## Submission and troubleshooting
+## Output files and troubleshooting
 
-Submit the source code, this README, both dependency lock files, tests, and `reports/`.
-If the submission requires the clean data artifact, attach the local JSONL or Parquet file
-separately; it is intentionally absent from Git. A new checkout can recreate it using the
-commands above. Do not submit `.venv`, caches, or secrets.
+I track the source code, README, dependency locks, tests, and reports in Git. The
+clean JSONL and Parquet files remain local because generated data is ignored. A
+fresh checkout can recreate the corpus using the commands above.
 
 - **CUDA unavailable:** expected on this Intel UHD 620 PC. Complete CPU work with `--allow-cpu`
-  and use a compatible NVIDIA machine for the strict GPU deliverable.
+  and use a compatible NVIDIA machine for the CUDA check.
 - **Transient package download errors:** retry `uv sync --locked`. For slow networks,
   PowerShell can set `$env:UV_HTTP_TIMEOUT = '120'` and `$env:UV_CONCURRENT_DOWNLOADS = '2'`
   before retrying. `uv sync --locked --system-certs` uses the Windows certificate store.
 - **Download already exists:** use the existing raw file, or add `--force` to redownload it.
 - **Fewer than 5,000 clean records:** acquire a larger raw sample, rerun preprocessing, and
-  validate again. Do not lower the validation minimum for the submitted deliverable.
+  validate again. Do not lower the validation minimum for the output dataset.
 - **Different filter settings:** keep preprocessing and validation flags in agreement.
 
 References: [uv project workflow](https://docs.astral.sh/uv/guides/projects/),
