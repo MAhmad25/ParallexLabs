@@ -1,0 +1,19 @@
+[project]
+name = "week-3"
+version = "0.1.0"
+description = "Week 3: Gemini grounded generation, refusal checks, and latency logging"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "chromadb>=1.5.9",
+    "google-genai>=2.31.0,<3.0.0",
+    "httpx>=0.28.1",
+    "python-dotenv>=1.2.4",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

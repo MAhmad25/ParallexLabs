@@ -17,15 +17,23 @@ ParallexLabs/
 │   ├── scripts/
 │   ├── tests/
 │   └── reports/
-└── Week 2/
+├── Week 2/
+│   ├── README.md
+│   ├── pyproject.toml
+│   ├── uv.lock
+│   ├── requirements.txt
+│   ├── src/
+│   ├── scripts/
+│   ├── tests/
+│   ├── queries/
+│   └── reports/
+└── Week 3/
     ├── README.md
     ├── pyproject.toml
     ├── uv.lock
     ├── requirements.txt
     ├── src/
     ├── scripts/
-    ├── tests/
-    ├── queries/
     └── reports/
 ```
 
@@ -39,6 +47,11 @@ ChromaDB storage, semantic search, and optional Gemini answers. I indexed the fi
 10 cleaned articles as 353 vectors and measured retrieval across eight queries.
 The project has 89 passing tests. Each week's README explains my approach and
 includes setup instructions, measured results, and limitations.
+
+In [Week 3](Week%203/README.md), I extended that retrieval workflow with Gemini
+grounded generation, a low-relevance refusal threshold, citation validation,
+bounded API retries, and end-to-end latency logging. Week 3 has a separate
+database and environment; its README explains setup and how to run the pipeline.
 
 ## Git commands
 
@@ -85,3 +98,17 @@ uv run --locked python -m scripts.benchmark_retrieval
 Configure Week 2's ignored `.env` with a Gemini API key before ingestion. Its default
 live index uses the first 10 Week 1 articles. Database files remain local; reports
 and reproducible source are tracked in this repository.
+
+## Run Week 3
+
+```powershell
+Set-Location 'D:\ParallexLabs\Week 3'
+uv sync --locked
+if (!(Test-Path .env)) { Copy-Item .env.example .env }
+uv run --locked python -m scripts.chunk_corpus
+uv run --locked python -m scripts.ingest --request-interval 12
+uv run --locked python -m scripts.ask "Ask a question about the indexed articles"
+```
+
+Set `GEMINI_API_KEY` in `.env`. Week 3 uses its own ChromaDB index; see its
+README for the prompt, refusal, citation, retry, and latency details.
