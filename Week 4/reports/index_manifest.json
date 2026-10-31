@@ -1,0 +1,15 @@
+{
+  "collection": "week4_2b3a8f5dade815ad31aca516",
+  "identity": {
+    "schema_version": 1,
+    "input_sha256": "0c7a089f76ee278e90d9967b252c6d1498623f4a4f493f59ac202b54d371a7c0",
+    "embedding_model": "gemini-embedding-001",
+    "dimensions": 768,
+    "topic_method": "sklearn-lda-count-v1",
+    "sentiment_method": "vader-lexicon-rule-v1",
+    "provider": "gemini",
+    "source_chunks_sha256": "550c9c0e989fc99544144424c9a252353ad8ac1211745f08b882d7d615166e48"
+  },
+  "chunk_count": 353,
+  "distance_metric": "cosine"
+}

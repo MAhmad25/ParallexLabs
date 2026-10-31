@@ -27,13 +27,23 @@ ParallexLabs/
 │   ├── tests/
 │   ├── queries/
 │   └── reports/
-└── Week 3/
+├── Week 3/
+│   ├── README.md
+│   ├── pyproject.toml
+│   ├── uv.lock
+│   ├── requirements.txt
+│   ├── src/
+│   ├── scripts/
+│   └── reports/
+└── Week 4/
     ├── README.md
     ├── pyproject.toml
     ├── uv.lock
     ├── requirements.txt
     ├── src/
     ├── scripts/
+    ├── config/
+    ├── queries/
     └── reports/
 ```
 
@@ -52,6 +62,11 @@ In [Week 3](Week%203/README.md), I extended that retrieval workflow with Gemini
 grounded generation, a low-relevance refusal threshold, citation validation,
 bounded API retries, and end-to-end latency logging. Week 3 has a separate
 database and environment; its README explains setup and how to run the pipeline.
+
+In [Week 4](Week%204/README.md), I add LDA topic modeling and VADER sentiment to
+Week 3's chunks, evaluate sentiment against manually reviewed examples, and store
+NLP metadata with the Gemini vectors in a local ChromaDB collection. The Week 4
+README includes the evaluation report, filter examples, setup, and limitations.
 
 ## Git commands
 
@@ -112,3 +127,28 @@ uv run --locked python -m scripts.ask "Ask a question about the indexed articles
 
 Set `GEMINI_API_KEY` in `.env`. Week 3 uses its own ChromaDB index; see its
 README for the prompt, refusal, citation, retry, and latency details.
+
+## Run Week 4
+
+If Week 3's local chunk file is missing, create it first:
+
+```powershell
+Set-Location 'D:\ParallexLabs\Week 3'
+uv run --locked python -m scripts.chunk_corpus
+```
+
+Then run Week 4:
+
+```powershell
+Set-Location 'D:\ParallexLabs\Week 4'
+uv sync --locked
+uv run --locked python -m scripts.enrich_corpus
+uv run --locked python -m scripts.evaluate_sentiment
+uv run --locked python -m scripts.validate_edge_cases
+uv run --locked python -m scripts.index_corpus
+uv run --locked python -m scripts.verify_index
+```
+
+Week 4 reads the Week 3 chunk file, reuses matching local Week 2 vectors when
+available, and keeps its enriched corpus and ChromaDB index local. Search can
+filter by topic ID or label and sentiment; see its README for examples.

@@ -1,0 +1,200 @@
+{
+  "status": "complete",
+  "evaluation_method": "held-out human-reviewed chunk labels; gold labels are not used by VADER",
+  "sample_count": 15,
+  "gold_label_counts": {
+    "neutral": 6,
+    "positive": 5,
+    "negative": 4
+  },
+  "predicted_label_counts": {
+    "negative": 7,
+    "positive": 8
+  },
+  "accuracy": 0.5333333333333333,
+  "macro_f1": 0.44755244755244755,
+  "labels_order": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "confusion_matrix_rows_true_columns_predicted": [
+    [
+      4,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      4
+    ],
+    [
+      1,
+      0,
+      4
+    ]
+  ],
+  "per_class": {
+    "negative": {
+      "precision": 0.5714285714285714,
+      "recall": 1.0,
+      "f1-score": 0.7272727272727273,
+      "support": 4.0
+    },
+    "neutral": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 6.0
+    },
+    "positive": {
+      "precision": 0.5,
+      "recall": 0.8,
+      "f1-score": 0.6153846153846154,
+      "support": 5.0
+    }
+  },
+  "item_results": [
+    {
+      "chunk_id": "5ac93b97af75a6bbf54498870ec5a00bc97735ebdd3ca1d4053af48164a580a0",
+      "title": "Anarchism",
+      "manual_label": "neutral",
+      "predicted_label": "negative",
+      "compound": -0.7096,
+      "correct": false,
+      "review_note": "Factual definition of a political philosophy; critical vocabulary describes the subject rather than the narrator's attitude."
+    },
+    {
+      "chunk_id": "ef134b389dbc876624fe4c1463cd04eb394ad7715924bfa4add2d12e54c79153",
+      "title": "Albedo",
+      "manual_label": "neutral",
+      "predicted_label": "positive",
+      "compound": 0.5483,
+      "correct": false,
+      "review_note": "The phrase positive feedback is a climate-science term here, not approval or praise."
+    },
+    {
+      "chunk_id": "3d42a18ec0243951bccd24a0e450a46155c6dfd0b2d3b825d0a07a84d30d80c7",
+      "title": "A",
+      "manual_label": "neutral",
+      "predicted_label": "positive",
+      "compound": 0.6369,
+      "correct": false,
+      "review_note": "Factual description of the letter's form, sound, and use."
+    },
+    {
+      "chunk_id": "76a28578a99ca483085003148198dd3e6d2f1be7448d096f87ed6f52cb4ca454",
+      "title": "Alabama",
+      "manual_label": "neutral",
+      "predicted_label": "positive",
+      "compound": 0.8591,
+      "correct": false,
+      "review_note": "Geographic and administrative facts about Alabama."
+    },
+    {
+      "chunk_id": "35c0107817e519fe073e481c7e83aa3fed3b29594ca0bb2df4387d48c5e01f88",
+      "title": "Aristotle",
+      "manual_label": "neutral",
+      "predicted_label": "positive",
+      "compound": 0.875,
+      "correct": false,
+      "review_note": "Biographical and subject-area facts; 'great' is not used as an opinion of the article's tone."
+    },
+    {
+      "chunk_id": "8ba59baf522e000a7c98bc244b1ffe8315cf2230a19e23e9e8024171df743f1b",
+      "title": "Abraham Lincoln",
+      "manual_label": "neutral",
+      "predicted_label": "negative",
+      "compound": -0.969,
+      "correct": false,
+      "review_note": "Mixed historical summary of both Lincoln's achievements and conflict; overall passage is encyclopedic."
+    },
+    {
+      "chunk_id": "9502aef059b1df4c8edd672d95eb2d8b6a14b8561f400011f9ef16108ca1251d",
+      "title": "Academy Award for Best Production Design",
+      "manual_label": "positive",
+      "predicted_label": "positive",
+      "compound": 0.9992,
+      "correct": true,
+      "review_note": "Recognition of achievement and best-in-category work are explicitly favorable evaluations."
+    },
+    {
+      "chunk_id": "581ab0c4aaef2410241f06a45bcffdec2cd24a9918ac465ebf4da13745b18958",
+      "title": "Academy Awards",
+      "manual_label": "positive",
+      "predicted_label": "positive",
+      "compound": 0.9961,
+      "correct": true,
+      "review_note": "The passage praises excellence and describes the award as prestigious and significant."
+    },
+    {
+      "chunk_id": "1e4c43198c38ac5c54f5862aabbf097c0ba1a91ab871178a06e262e8ae622b50",
+      "title": "Achilles",
+      "manual_label": "positive",
+      "predicted_label": "negative",
+      "compound": -0.9081,
+      "correct": false,
+      "review_note": "Achilles is explicitly described as a hero and the greatest of the Greek warriors."
+    },
+    {
+      "chunk_id": "54cc419059af36070c62134769988ff61e8efecde8a1c5505a541d58ad8ab7a3",
+      "title": "An American in Paris",
+      "manual_label": "positive",
+      "predicted_label": "positive",
+      "compound": 0.9709,
+      "correct": true,
+      "review_note": "The music passage uses favorable language about inspiration, energy, and an earlier success."
+    },
+    {
+      "chunk_id": "8173abdd82c76b8aa945c90034c73b9095385a846880bb32732ea98a697bc848",
+      "title": "Aristotle",
+      "manual_label": "positive",
+      "predicted_label": "positive",
+      "compound": 0.9643,
+      "correct": true,
+      "review_note": "This excerpt describes Aristotle's significant influence and says he was revered."
+    },
+    {
+      "chunk_id": "57abdfa88b81780cc548a1e0ade67aa45caf1fd2ba5db4e85daa95e4891e71c7",
+      "title": "Alabama",
+      "manual_label": "negative",
+      "predicted_label": "negative",
+      "compound": -0.5719,
+      "correct": true,
+      "review_note": "The historical summary explicitly describes enslavement, economic hardship, and discriminatory Jim Crow laws."
+    },
+    {
+      "chunk_id": "8f93af3ff239f1a8e62f201e5cc5edbfd8f3819f4bbdfbe83f9d5bff9c8c4575",
+      "title": "Achilles",
+      "manual_label": "negative",
+      "predicted_label": "negative",
+      "compound": -0.9753,
+      "correct": true,
+      "review_note": "The excerpt centers on distress, pain, sorrow, grief, and weakness."
+    },
+    {
+      "chunk_id": "22da5f5e08298073304ecbed7beac9c96ee0586fa0efc7c9692ccbeabf0765f2",
+      "title": "Anarchism",
+      "manual_label": "negative",
+      "predicted_label": "negative",
+      "compound": -0.6728,
+      "correct": true,
+      "review_note": "The passage discusses civil wars, anti-war movements, and historically violent tactics."
+    },
+    {
+      "chunk_id": "1aa93ca4334573e5d4243e7b4ad739e77d09f7e3be7a225c6adc6db0310cb233",
+      "title": "Abraham Lincoln",
+      "manual_label": "negative",
+      "predicted_label": "negative",
+      "compound": -0.9101,
+      "correct": true,
+      "review_note": "The passage describes an attack, bombardment, harsh treatment, and plots to assassinate Lincoln."
+    }
+  ],
+  "limitations": [
+    "This small sample estimates performance only on reviewed chunks from the selected Wikipedia subset.",
+    "VADER is tuned for lexical sentiment and can misread factual prose, negation, jargon, and historical violence.",
+    "Accuracy is not a measure of topic quality or generalization to other domains."
+  ]
+}

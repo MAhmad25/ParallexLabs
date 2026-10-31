@@ -1,0 +1,354 @@
+{
+  "status": "reviewed_with_mixed_topics",
+  "reviewed_at_utc": "2026-10-24T11:59:28.014993+00:00",
+  "source_chunks_sha256": "550c9c0e989fc99544144424c9a252353ad8ac1211745f08b882d7d615166e48",
+  "enriched_chunks_sha256": "0c7a089f76ee278e90d9967b252c6d1498623f4a4f493f59ac202b54d371a7c0",
+  "chunks_reviewed": 353,
+  "topic_count": 8,
+  "top_terms_per_topic_reviewed": 10,
+  "representative_chunks_reviewed_per_topic": 3,
+  "coherent_or_coherent_with_spillover_topics": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "mixed_topics": [
+    3,
+    5,
+    6,
+    7
+  ],
+  "summary": "Four topics have a readable shared theme, with some spillover in two. Four topics mix unrelated material; those labels are explicitly marked mixed in the indexed metadata.",
+  "quality_note": "LDA confidence is the model distribution over its learned topics; it is not a manual correctness score. The 10-article subset is too small and varied for clean, stable topic boundaries.",
+  "topics": [
+    {
+      "topic_id": 0,
+      "label": "U.S. Civil War and political history",
+      "coherence_review": "coherent",
+      "review_note": "Top terms and all three representative passages concern Lincoln, the Civil War, and U.S. political history.",
+      "top_terms": [
+        "ceremony",
+        "film",
+        "party",
+        "union",
+        "illinois",
+        "war",
+        "categories",
+        "grant",
+        "oscar",
+        "time"
+      ],
+      "reviewed_representative_chunks": [
+        {
+          "id": "609946a7163249b3a94f06123ea45cf44af1e3206ce4bdc85376a9467328d240",
+          "title": "Abraham Lincoln",
+          "chunk_index": 50,
+          "confidence": 0.993122,
+          "preview": "rs with the ability to purchase title for the freedmen. Lincoln announced a Reconstruction plan that involved short-term military control, pending readmission under the control of southern Unionists. Historians agree that it is impossible to predict how Reconstruction would have "
+        },
+        {
+          "id": "06d9ef23afc6e53a76addf0ff7c2243c50c3ff403d75a008b2c757ec765185ed",
+          "title": "Abraham Lincoln",
+          "chunk_index": 45,
+          "confidence": 0.992949,
+          "preview": "south. Lincoln traveled to Grant's headquarters at City Point, Virginia, to confer with Grant and William Tecumseh Sherman. Lincoln reacted to Union losses by mobilizing support throughout the North. Lincoln authorized Grant to target infrastructure—plantations, railroads, and br"
+        },
+        {
+          "id": "32922b583c2dee7dd3f1358bfc50f2ba52fd34f52fe1bb58e229dc74ad4dfe90",
+          "title": "Abraham Lincoln",
+          "chunk_index": 11,
+          "confidence": 0.992896,
+          "preview": "oln's second state house campaign in 1834, this time as a Whig, was a success over a powerful Whig opponent. Then followed his four terms in the Illinois House of Representatives for Sangamon County. He championed construction of the Illinois and Michigan Canal, and later was a C"
+        }
+      ]
+    },
+    {
+      "topic_id": 1,
+      "label": "Alabama government and local history",
+      "coherence_review": "coherent",
+      "review_note": "All three representative passages are about Alabama; top terms cluster around state and local government.",
+      "top_terms": [
+        "state",
+        "county",
+        "mobile",
+        "legislature",
+        "birmingham",
+        "area",
+        "counties",
+        "montgomery",
+        "largest",
+        "year"
+      ],
+      "reviewed_representative_chunks": [
+        {
+          "id": "e13fd106656faf1a0c0c5f4c04bbd5c661c318e437fac1b6038f6fb9b4ec6cfe",
+          "title": "Alabama",
+          "chunk_index": 47,
+          "confidence": 0.993635,
+          "preview": "tax on a meal. In 2020, sales and excise taxes in Alabama accounted for 38% of all state and local revenue. Only Alabama, Mississippi, and South Dakota tax groceries at the full state sales tax rate. The corporate income tax rate in Alabama is 6.5%. The overall federal, state, an"
+        },
+        {
+          "id": "1c8a11ebb155464ef9f67631e0f66f03b737c311b7448a62794dd6f689dfe423",
+          "title": "Alabama",
+          "chunk_index": 14,
+          "confidence": 0.993476,
+          "preview": "rom 1901 to 1961, the rural-dominated legislature refused to reapportion House and Senate seats based on population, as required by the state constitution to follow the results of decennial censuses. They held on to old representation to maintain political and economic power in a"
+        },
+        {
+          "id": "b49aa3a503fde2668933c99f86f8df1484d398b68c6d9cf2ee748dec7cb5c81f",
+          "title": "Alabama",
+          "chunk_index": 46,
+          "confidence": 0.993346,
+          "preview": "rape and incest. The law subjects doctors who perform abortions with 10 to 99 years imprisonment. The law was originally supposed to take effect the following November, but on October 29, 2019, U.S. District Judge Myron Thompson blocked the law from taking effect due to it being "
+        }
+      ]
+    },
+    {
+      "topic_id": 2,
+      "label": "Anarchism and political theory",
+      "coherence_review": "coherent_with_spillover",
+      "review_note": "Most representatives and top terms concern anarchism and political thought; one Aristotle history excerpt spills into this topic.",
+      "top_terms": [
+        "anarchists",
+        "state",
+        "anarchist",
+        "war",
+        "movement",
+        "free",
+        "political",
+        "person",
+        "world",
+        "society"
+      ],
+      "reviewed_representative_chunks": [
+        {
+          "id": "b37ec3d3f445652ec473edcb3f8b1472b9e065290bdeffbb3c83a39ed0b2cd99",
+          "title": "Anarchism",
+          "chunk_index": 27,
+          "confidence": 0.993226,
+          "preview": "ender, sexuality, and free love As gender and sexuality carry along them dynamics of hierarchy, many anarchists address, analyse, and oppose the suppression of one's autonomy imposed by gender roles. Sexuality was not often discussed by classical anarchists but the few that did f"
+        },
+        {
+          "id": "bf33f81851ec86fca699d151c8751530b2089215300d531a0c46a22cff7995f2",
+          "title": "Aristotle",
+          "chunk_index": 43,
+          "confidence": 0.99265,
+          "preview": "d and Latin Christians had translations made, both from Arabic translations, such as those by Gerard of Cremona, and from the original Greek, such as those by James of Venice and William of Moerbeke. After the Scholastic Thomas Aquinas wrote his Summa Theologica, working from Moe"
+        },
+        {
+          "id": "6916f9c82788b6a6a94a0926e7e5730ee9266666839fa09377dae06fde31d606",
+          "title": "Anarchism",
+          "chunk_index": 26,
+          "confidence": 0.992604,
+          "preview": "of domination and believe it to be illegitimate regardless of its political tendencies. Instead of people being able to control the aspects of their life, major decisions are taken by a small elite. Authority ultimately rests solely on power, regardless of whether that power is o"
+        }
+      ]
+    },
+    {
+      "topic_id": 3,
+      "label": "Mixed: classical history and natural science",
+      "coherence_review": "mixed",
+      "review_note": "Greek mythology terms such as Patroclus and Hector appear alongside water and surface-science excerpts.",
+      "top_terms": [
+        "patroclus",
+        "hector",
+        "death",
+        "water",
+        "does",
+        "troy",
+        "trojan",
+        "animals",
+        "light",
+        "son"
+      ],
+      "reviewed_representative_chunks": [
+        {
+          "id": "17e445edaaf1f557518704ff4604a6ae5473d3418ab0302c2a60e5d39a93d449",
+          "title": "Albedo",
+          "chunk_index": 14,
+          "confidence": 0.993088,
+          "preview": ", so there are many superimposed bubble surfaces which reflect, adding up their reflectivities. Fresh 'black' ice exhibits Fresnel reflection. Snow on top of this sea ice increases the albedo to 0.9. Clouds Cloud albedo has substantial influence over atmospheric temperatures. Dif"
+        },
+        {
+          "id": "b016c7196db7be7e7650d87b14255a12031b3b41569341a3498c11938ec6b153",
+          "title": "Albedo",
+          "chunk_index": 13,
+          "confidence": 0.992655,
+          "preview": "iberia) were neutral or perhaps warming. Water Water reflects light very differently from typical terrestrial materials. The reflectivity of a water surface is calculated using the Fresnel equations. At the scale of the wavelength of light even wavy water is always smooth so the "
+        },
+        {
+          "id": "fe35f6f91664951caed2358c7473ba7e2cc03747293713cbd2e0099f300e2872",
+          "title": "Aristotle",
+          "chunk_index": 15,
+          "confidence": 0.992494,
+          "preview": "Philoponus (in Late antiquity) and Galileo (in Early modern period) are said to have shown by experiment that Aristotle's claim that a heavier object falls faster than a lighter object is incorrect. A contrary opinion is given by Carlo Rovelli, who argues that Aristotle's physics"
+        }
+      ]
+    },
+    {
+      "topic_id": 4,
+      "label": "Climate, albedo, and radiation",
+      "coherence_review": "coherent_with_spillover",
+      "review_note": "Climate, radiation, ice, and temperature terms align with two Albedo examples; one philosophy excerpt is mixed in.",
+      "top_terms": [
+        "surface",
+        "change",
+        "soul",
+        "solar",
+        "radiation",
+        "snow",
+        "cause",
+        "climate",
+        "temperature",
+        "ice"
+      ],
+      "reviewed_representative_chunks": [
+        {
+          "id": "5136f31323a187ddb7d9b44130bd4319888bf8a40ba8985f629d132763e5308c",
+          "title": "Albedo",
+          "chunk_index": 8,
+          "confidence": 0.99379,
+          "preview": "he snow–temperature feedback. However, because local weather is dynamic due to the change of seasons, eventually warm air masses and a more direct angle of sunlight (higher insolation) cause melting. When the melted area reveals surfaces with lower albedo, such as grass, soil, or"
+        },
+        {
+          "id": "90e3b1a94529be6bb1539a1ce21cb928c40103ef8ba0dce55eff8d2559ecac41",
+          "title": "Aristotle",
+          "chunk_index": 24,
+          "confidence": 0.993041,
+          "preview": "le's psychology, given in his treatise On the Soul (peri psychēs), posits three kinds of soul (\"psyches\"): the vegetative soul, the sensitive soul, and the rational soul. Humans have a rational soul. The human soul incorporates the powers of the other kinds: Like the vegetative s"
+        },
+        {
+          "id": "4ef73d1aa3bc5a613768e09a84a8d609e8cbd262098784f0c68c8f1af7913193",
+          "title": "Abraham Lincoln",
+          "chunk_index": 4,
+          "confidence": 0.992847,
+          "preview": "Indiana where the land surveys and titles were more reliable. Indiana was a \"free\" (non-slaveholding) territory, and they settled in an \"unbroken forest\" in Hurricane Township, Perry County, Indiana. In 1860, Lincoln noted that the family's move to Indiana was \"partly on account "
+        }
+      ]
+    },
+    {
+      "topic_id": 5,
+      "label": "Mixed: culture, letters, and references",
+      "coherence_review": "mixed",
+      "review_note": "The terms combine music, film, letter forms, and references, while the highest-confidence excerpts include unrelated material.",
+      "top_terms": [
+        "gershwin",
+        "works",
+        "letter",
+        "film",
+        "oscar",
+        "vowel",
+        "war",
+        "section",
+        "library",
+        "university"
+      ],
+      "reviewed_representative_chunks": [
+        {
+          "id": "338f354a4aa4258bc34856c9d811fb5ad560c61f28c9678a98a6ff39237990b9",
+          "title": "Abraham Lincoln",
+          "chunk_index": 34,
+          "confidence": 0.993375,
+          "preview": "arresting local Maryland officials. Lincoln suspended the writ of habeas corpus in an effort to protect the troops trying to reach Washington. John Merryman, one Maryland official hindering the U.S. troop movements, petitioned Supreme Court Chief Justice Roger B. Taney to issue a"
+        },
+        {
+          "id": "50a057d218a762aef5c1c12370e0f7e4001cb3a4ba7a429b1e71e368b12bd94d",
+          "title": "Abraham Lincoln",
+          "chunk_index": 71,
+          "confidence": 0.992753,
+          "preview": "n Notes References Bibliography (2 vols.) Ellenberg's essay is adapted from his 2021 book, Shape: The Hidden Geometry of Information, Biology, Strategy, Democracy, and Everything Else, Penguin Press. ISBN 9781984879059 . Second edition, 2022. Wm. B. Eerdmans Publishing Company. E"
+        },
+        {
+          "id": "4c0e4e37ce1cf618eb9ca78d6f0bbafcf329bd262827252d42cae49d56bd02d6",
+          "title": "A",
+          "chunk_index": 7,
+          "confidence": 0.992715,
+          "preview": "ammar, \"a\", and its variant \"an\", is an indefinite article, used to introduce noun phrases. Finally, the letter A is used to denote size, as in a narrow size shoe, or a small cup size in a brassiere. Related characters Descendants and related characters in the Latin alphabet Æ æ "
+        }
+      ]
+    },
+    {
+      "topic_id": 6,
+      "label": "Mixed: education, philosophy, and government",
+      "coherence_review": "mixed",
+      "review_note": "Government, Greek philosophy, education, and court language do not form one clear theme across the examples.",
+      "top_terms": [
+        "state",
+        "greek",
+        "philosophers",
+        "anarchist",
+        "court",
+        "political",
+        "thetis",
+        "ancient",
+        "education",
+        "body"
+      ],
+      "reviewed_representative_chunks": [
+        {
+          "id": "75aa7a8d304513c5000dca9bca58e5907840316c468fd21763c0ef343b952e92",
+          "title": "Abraham Lincoln",
+          "chunk_index": 20,
+          "confidence": 0.993382,
+          "preview": "er Whig President Millard Fillmore. Buchanan prevailed, while Republican William Henry Bissell won election as Governor of Illinois, and Lincoln became a leading Republican in Illinois. Dred Scott v. Sandford Dred Scott was a slave whose master took him from a slave state to a te"
+        },
+        {
+          "id": "803544ec9814ee9815ab573277a1cfbe3e50451bacdb8cc3929e43eebdc61c0a",
+          "title": "Alabama",
+          "chunk_index": 44,
+          "confidence": 0.992942,
+          "preview": "islative delegations, the Alabama legislature kept control of county governments. The executive branch is responsible for the execution and oversight of laws. It is headed by the governor of Alabama. Other members of the executive branch include the cabinet, the lieutenant govern"
+        },
+        {
+          "id": "431d37ae447a8192e136c7732ea80c4fa8e2c5d1a7d46c29761bfb8055e316e0",
+          "title": "Abraham Lincoln",
+          "chunk_index": 59,
+          "confidence": 0.992884,
+          "preview": "of War Stanton had issued orders that Booth be taken alive, so Corbett was initially arrested to be court martialed. After a brief interview, Stanton declared him a patriot and dismissed the charge. Funeral and burial The late President lay in state, first in the East Room of the"
+        }
+      ]
+    },
+    {
+      "topic_id": 7,
+      "label": "Mixed: war, politics, and philosophy",
+      "coherence_review": "mixed",
+      "review_note": "The topic combines U.S. war and politics with Plato, university, and philosophy terms.",
+      "top_terms": [
+        "war",
+        "state",
+        "university",
+        "plato",
+        "school",
+        "natural",
+        "time",
+        "philosophy",
+        "form",
+        "republican"
+      ],
+      "reviewed_representative_chunks": [
+        {
+          "id": "84b555a2b4610e9387ef75193e37ea6b29f73f5090f532eda5480be576df5c04",
+          "title": "Abraham Lincoln",
+          "chunk_index": 35,
+          "confidence": 0.993466,
+          "preview": "set that bipartisan support was essential to success, and that any compromise alienated factions on both sides of the aisle, such as the appointment of Republicans and Democrats to command positions. Copperheads criticized Lincoln for refusing to compromise on slavery. The Radica"
+        },
+        {
+          "id": "530d00320cc9313e1fbae30dcd20702e077c8ae74eda6306c74838a3596c2eb0",
+          "title": "Abraham Lincoln",
+          "chunk_index": 36,
+          "confidence": 0.992655,
+          "preview": "ed war with Great Britain, the U.S. Navy illegally intercepted a British mail ship, the Trent, on the high seas and seized two Confederate envoys; Britain protested vehemently while the U.S. cheered. Lincoln ended the crisis by releasing the two diplomats. Biographer James G. Ran"
+        },
+        {
+          "id": "87a84f1c841871150ca3d40d6864894ae348d335adfb58eee24f77b6bbf6a898",
+          "title": "Aristotle",
+          "chunk_index": 12,
+          "confidence": 0.992654,
+          "preview": "l Forms (or ideas) and descends to knowledge of particular imitations of these. Aristotle uses induction from examples alongside deduction, whereas Plato relies on deduction from a priori principles. Natural philosophy Aristotle's \"natural philosophy\" spans a wide range of natura"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "collection": "week4_2b3a8f5dade815ad31aca516",
+  "chunk_count": 353,
+  "embedding_model": "gemini-embedding-001",
+  "embedding_dimensions": 768,
+  "distance_metric": "cosine",
+  "api_calls_for_indexing": 0,
+  "vector_provenance": {
+    "source_collection": "week2_2a35c168f96896e058280d87",
+    "source_manifest": "index_manifest.json",
+    "source_chunk_sha256": "550c9c0e989fc99544144424c9a252353ad8ac1211745f08b882d7d615166e48",
+    "reused_embeddings": 353
+  },
+  "target_db": "D:\\ParallexLabs\\Week 4\\chroma_db",
+  "elapsed_seconds": 3.4720818999921903,
+  "metadata_fields": [
+    "chunk_index",
+    "document_id",
+    "document_sha256",
+    "end_char",
+    "sentiment",
+    "sentiment_compound",
+    "sentiment_negative",
+    "sentiment_neutral",
+    "sentiment_positive",
+    "sentiment_status",
+    "source",
+    "start_char",
+    "title",
+    "topic_confidence",
+    "topic_distribution_json",
+    "topic_id",
+    "topic_label",
+    "topic_status",
+    "url"
+  ],
+  "manifest": "index_manifest.json"
+}

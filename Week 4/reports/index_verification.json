@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "collection": "week4_2b3a8f5dade815ad31aca516",
+  "expected_records": 353,
+  "checked_records": 353,
+  "stored_text_metadata_and_vector_checked": true,
+  "vector_dimensions_finiteness_and_norm_checked": true,
+  "metadata_filter_checks": [
+    {
+      "filter": {
+        "sentiment": "positive"
+      },
+      "count": 222,
+      "exact": true
+    },
+    {
+      "filter": {
+        "sentiment": "neutral"
+      },
+      "count": 7,
+      "exact": true
+    },
+    {
+      "filter": {
+        "sentiment": "negative"
+      },
+      "count": 124,
+      "exact": true
+    },
+    {
+      "filter": {
+        "sentiment": "unknown"
+      },
+      "count": 0,
+      "exact": true
+    },
+    {
+      "filter": {
+        "topic_id": 2
+      },
+      "count": 51,
+      "exact": true
+    },
+    {
+      "filter": {
+        "$and": [
+          {
+            "topic_id": {
+              "$eq": 2
+            }
+          },
+          {
+            "sentiment": {
+              "$eq": "negative"
+            }
+          }
+        ]
+      },
+      "count": 24,
+      "exact": true
+    }
+  ],
+  "failures": []
+}
