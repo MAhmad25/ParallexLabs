@@ -1,0 +1,13 @@
+.venv/
+.env
+.env.*
+!.env.example
+.cache/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+*.tmp
+chroma_db/
+logs/
+reports/*.jsonl

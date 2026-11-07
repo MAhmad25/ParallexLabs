@@ -1,0 +1,142 @@
+{
+  "status": "complete",
+  "base_url": "http://127.0.0.1:8000",
+  "query_count": 10,
+  "passed": 10,
+  "failed": 0,
+  "total_issues": 0,
+  "latency": {
+    "count": 10,
+    "min_ms": 532.8,
+    "max_ms": 1504.2,
+    "mean_ms": 779.4,
+    "median_ms": 717.5,
+    "p95_ms": 1504.2,
+    "p99_ms": 1504.2
+  },
+  "collection": {
+    "collection": "week4_2b3a8f5dade815ad31aca516",
+    "chunk_count": 353,
+    "embedding_model": "gemini-embedding-001",
+    "embedding_dimensions": 768,
+    "distance_metric": "cosine"
+  },
+  "per_query": [
+    {
+      "query_index": 1,
+      "question": "What is anarchism and what are its origins?",
+      "filters": {},
+      "k": 5,
+      "status": "pass",
+      "http_status": 200,
+      "hit_count": 5,
+      "latency_seconds": 0.8578,
+      "issues": []
+    },
+    {
+      "query_index": 2,
+      "question": "What does the corpus say about climate and albedo?",
+      "filters": {},
+      "k": 5,
+      "status": "pass",
+      "http_status": 200,
+      "hit_count": 5,
+      "latency_seconds": 0.5328,
+      "issues": []
+    },
+    {
+      "query_index": 3,
+      "question": "Tell me about Alabama history and government",
+      "filters": {},
+      "k": 5,
+      "status": "pass",
+      "http_status": 200,
+      "hit_count": 5,
+      "latency_seconds": 1.5042,
+      "issues": []
+    },
+    {
+      "query_index": 4,
+      "question": "Who was Abraham Lincoln?",
+      "filters": {},
+      "k": 5,
+      "status": "pass",
+      "http_status": 200,
+      "hit_count": 5,
+      "latency_seconds": 0.542,
+      "issues": []
+    },
+    {
+      "query_index": 5,
+      "question": "What is the Academy Awards ceremony?",
+      "filters": {},
+      "k": 5,
+      "status": "pass",
+      "http_status": 200,
+      "hit_count": 5,
+      "latency_seconds": 0.6337,
+      "issues": []
+    },
+    {
+      "query_index": 6,
+      "question": "Tell me about Achilles in Greek mythology",
+      "filters": {},
+      "k": 3,
+      "status": "pass",
+      "http_status": 200,
+      "hit_count": 3,
+      "latency_seconds": 0.8013,
+      "issues": []
+    },
+    {
+      "query_index": 7,
+      "question": "What is the philosophy of Aristotle?",
+      "filters": {},
+      "k": 5,
+      "status": "pass",
+      "http_status": 200,
+      "hit_count": 5,
+      "latency_seconds": 0.5542,
+      "issues": []
+    },
+    {
+      "query_index": 8,
+      "question": "What does the corpus say about political theory?",
+      "filters": {
+        "sentiment": "negative"
+      },
+      "k": 5,
+      "status": "pass",
+      "http_status": 200,
+      "hit_count": 5,
+      "latency_seconds": 0.8442,
+      "issues": []
+    },
+    {
+      "query_index": 9,
+      "question": "Tell me about radiation and climate science",
+      "filters": {
+        "topic_id": 4
+      },
+      "k": 5,
+      "status": "pass",
+      "http_status": 200,
+      "hit_count": 5,
+      "latency_seconds": 0.5458,
+      "issues": []
+    },
+    {
+      "query_index": 10,
+      "question": "History of the United States",
+      "filters": {
+        "sentiment": "positive"
+      },
+      "k": 3,
+      "status": "pass",
+      "http_status": 200,
+      "hit_count": 3,
+      "latency_seconds": 0.9776,
+      "issues": []
+    }
+  ]
+}

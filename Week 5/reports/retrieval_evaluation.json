@@ -1,0 +1,131 @@
+{
+  "status": "complete",
+  "k": 5,
+  "query_count": 6,
+  "mean_precision_at_k": 0.5333,
+  "mean_recall_at_k": 0.8889,
+  "total_latency_seconds": 3.4783,
+  "mean_latency_seconds": 0.5797,
+  "collection": "week4_2b3a8f5dade815ad31aca516",
+  "embedding_model": "gemini-embedding-001",
+  "per_query": [
+    {
+      "query": "What is anarchism and what are its political origins?",
+      "k": 5,
+      "relevant_count": 3,
+      "retrieved_ids": [
+        "5ac93b97af75a6bbf54498870ec5a00bc97735ebdd3ca1d4053af48164a580a0",
+        "22da5f5e08298073304ecbed7beac9c96ee0586fa0efc7c9692ccbeabf0765f2",
+        "2da9bbab6e55b9d67bfee39223a7bf7cd258834e9c181d40b961341239d0d18d",
+        "f530f558aa64367da3c2cb4a9536a7aa70cd99fb62a8302536d8919fc6be7692",
+        "3b924ce1bbbbd8e0ee1e349f3a3178b577becf806767e93e21992d2c49c2485b"
+      ],
+      "true_positives": [
+        "5ac93b97af75a6bbf54498870ec5a00bc97735ebdd3ca1d4053af48164a580a0",
+        "22da5f5e08298073304ecbed7beac9c96ee0586fa0efc7c9692ccbeabf0765f2"
+      ],
+      "precision_at_k": 0.4,
+      "recall_at_k": 0.6667,
+      "latency_seconds": 0.9275
+    },
+    {
+      "query": "What is albedo and how does it relate to climate and radiation?",
+      "k": 5,
+      "relevant_count": 3,
+      "retrieved_ids": [
+        "59f9d37183ec853dca991a0b89251081fb86e49c7a9ab517cb29ebcc250f2712",
+        "ef134b389dbc876624fe4c1463cd04eb394ad7715924bfa4add2d12e54c79153",
+        "048ebbd7521396897b988ff2a1ce99e59fd9be0a50b5161a94054c2cf0f82cd7",
+        "54de030334505c28fcaf3f16d586369ff412c162faaa987cd20529189f4e510b",
+        "f104a787cf36c2f321cd3b8bf47c9647cc8da11aa98faab6459e6758e47b4ce2"
+      ],
+      "true_positives": [
+        "ef134b389dbc876624fe4c1463cd04eb394ad7715924bfa4add2d12e54c79153",
+        "048ebbd7521396897b988ff2a1ce99e59fd9be0a50b5161a94054c2cf0f82cd7",
+        "f104a787cf36c2f321cd3b8bf47c9647cc8da11aa98faab6459e6758e47b4ce2"
+      ],
+      "precision_at_k": 0.6,
+      "recall_at_k": 1.0,
+      "latency_seconds": 0.5134
+    },
+    {
+      "query": "Tell me about the state of Alabama and its history",
+      "k": 5,
+      "relevant_count": 3,
+      "retrieved_ids": [
+        "57abdfa88b81780cc548a1e0ade67aa45caf1fd2ba5db4e85daa95e4891e71c7",
+        "76a28578a99ca483085003148198dd3e6d2f1be7448d096f87ed6f52cb4ca454",
+        "cf651b20b712c357c3e90757643637616969af63fa2250b835d3024e9709f071",
+        "5d09e6dc13f2c98050c4ddd8d2981f9cb639f4c67721e9af8c92ad302603d881",
+        "0db8fee2c7be4944fa438cb7f560e94923a94fa92bcfa02a254578b9d742a09d"
+      ],
+      "true_positives": [
+        "57abdfa88b81780cc548a1e0ade67aa45caf1fd2ba5db4e85daa95e4891e71c7",
+        "76a28578a99ca483085003148198dd3e6d2f1be7448d096f87ed6f52cb4ca454",
+        "0db8fee2c7be4944fa438cb7f560e94923a94fa92bcfa02a254578b9d742a09d"
+      ],
+      "precision_at_k": 0.6,
+      "recall_at_k": 1.0,
+      "latency_seconds": 0.4423
+    },
+    {
+      "query": "Who was Abraham Lincoln and what role did he play in the Civil War?",
+      "k": 5,
+      "relevant_count": 3,
+      "retrieved_ids": [
+        "13e142cffaec910a20f9d21701463e3e189a17e23bda3ca0f2beddd349b9b4cd",
+        "8ba59baf522e000a7c98bc244b1ffe8315cf2230a19e23e9e8024171df743f1b",
+        "1aa93ca4334573e5d4243e7b4ad739e77d09f7e3be7a225c6adc6db0310cb233",
+        "06d9ef23afc6e53a76addf0ff7c2243c50c3ff403d75a008b2c757ec765185ed",
+        "2c995ef22a98263295ca2894bc64882d85f90f853e7b95368b35bd69fc2fc62f"
+      ],
+      "true_positives": [
+        "13e142cffaec910a20f9d21701463e3e189a17e23bda3ca0f2beddd349b9b4cd",
+        "8ba59baf522e000a7c98bc244b1ffe8315cf2230a19e23e9e8024171df743f1b",
+        "1aa93ca4334573e5d4243e7b4ad739e77d09f7e3be7a225c6adc6db0310cb233"
+      ],
+      "precision_at_k": 0.6,
+      "recall_at_k": 1.0,
+      "latency_seconds": 0.4837
+    },
+    {
+      "query": "What is the history of the Academy Awards?",
+      "k": 5,
+      "relevant_count": 3,
+      "retrieved_ids": [
+        "581ab0c4aaef2410241f06a45bcffdec2cd24a9918ac465ebf4da13745b18958",
+        "9a69f2f2675776855fb86ce988780b000b5e41ed3830a106ec7b8c23e4ff423f",
+        "3d9d88d6cb0f5fdf03fc3012c3fd95e32f61754f702d8e393921998d3b29b45a",
+        "5746810d37ddb9bd21c143927b3d4200dcc697f78b49b7092af4e6a7024428d4",
+        "725def6a6abfbcb940f9223cd19af415013e07b9c7b8cfc166bcb07c0009981e"
+      ],
+      "true_positives": [
+        "581ab0c4aaef2410241f06a45bcffdec2cd24a9918ac465ebf4da13745b18958",
+        "3d9d88d6cb0f5fdf03fc3012c3fd95e32f61754f702d8e393921998d3b29b45a",
+        "725def6a6abfbcb940f9223cd19af415013e07b9c7b8cfc166bcb07c0009981e"
+      ],
+      "precision_at_k": 0.6,
+      "recall_at_k": 1.0,
+      "latency_seconds": 0.5067
+    },
+    {
+      "query": "Who was Achilles in Greek mythology?",
+      "k": 5,
+      "relevant_count": 3,
+      "retrieved_ids": [
+        "1e4c43198c38ac5c54f5862aabbf097c0ba1a91ab871178a06e262e8ae622b50",
+        "8f93af3ff239f1a8e62f201e5cc5edbfd8f3819f4bbdfbe83f9d5bff9c8c4575",
+        "ba3eef1589ab113187ab64bbe8c524e473f8d742c643589feb3fb199ba0f2289",
+        "c2fc2ab0136cdea01478e462dd49a8feba619edc8f31dee557cf12152d4ebf18",
+        "d710efbb126b560095a7d179be9125adaf1d94557ab4b8f5e784e3162a8c37df"
+      ],
+      "true_positives": [
+        "1e4c43198c38ac5c54f5862aabbf097c0ba1a91ab871178a06e262e8ae622b50",
+        "8f93af3ff239f1a8e62f201e5cc5edbfd8f3819f4bbdfbe83f9d5bff9c8c4575"
+      ],
+      "precision_at_k": 0.4,
+      "recall_at_k": 0.6667,
+      "latency_seconds": 0.6047
+    }
+  ]
+}
